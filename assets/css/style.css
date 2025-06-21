@@ -1,5 +1,6 @@
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -22,12 +23,13 @@ body {
 
 .slide {
   position: absolute;
-  left: 0px;
-  top: 0px;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0;
+  -webkit-transition: opacity 1s;
   transition: opacity 1s;
+  opacity: 0;
   background-position: center;
   background-size: cover;
 }
@@ -38,17 +40,19 @@ body {
 
 .control-pause span {
   position: absolute;
-  display: flex;
   bottom: 50%;
   left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   cursor: pointer;
 }
 
 .control-prev,
 .control-next {
   position: absolute;
-  cursor: pointer;
   bottom: 50%;
+  cursor: pointer;
 }
 
 .control-prev {
@@ -70,8 +74,12 @@ body {
   position: absolute;
   z-index: 1;
   bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
 }
 
@@ -82,10 +90,85 @@ body {
   border: 3px solid rgba(255, 255, 255, 0.4);
   border-radius: 50%;
 }
+
 .indicator:hover {
   cursor: pointer;
 }
+
 .indicator.active {
   border-color: #ffffff;
-  box-shadow: 0 0 10px #ffffff;
+  -webkit-box-shadow: 0 0 10px #ffffff;
+          box-shadow: 0 0 10px #ffffff;
+}
+
+@media (320px <= width <= 479px) {
+  body {
+    background-color: #a0a0a0;
+  }
+}
+
+@media (width >= 320px) {
+  body {
+    background-color: gray;
+  }
+}
+
+@media (480px < width <= 767px) {
+  body {
+    background-color: #c0c0c0;
+  }
+}
+
+@media (width > 600px) {
+  body {
+    background-color: orange;
+  }
+}
+
+@media (768px <= width < 1024px) {
+  body {
+    background-color: #d0d0d0;
+  }
+}
+
+@media (width >= 768px) {
+  body {
+    background-color: red;
+  }
+}
+
+@media (width >= 1024px) {
+  body {
+    background-color: yellow;
+  }
+}
+
+@media (width >= 1200px) {
+  body {
+    background-color: blue;
+  }
+}
+
+@media (width <= 1200px) {
+  body {
+    background-color: #f0f0f0;
+  }
+}
+
+@media (width <= 768px) {
+  body {
+    background-color: #e0e0e0;
+  }
+}
+
+@media (width <= 480px) {
+  body {
+    background-color: #b0b0b0;
+  }
+}
+
+@media (width < 400px) {
+  body {
+    background-color: green;
+  }
 }

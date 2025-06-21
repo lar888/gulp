@@ -1,0 +1,31 @@
+{
+  "name": "gulp",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "git+https://github.com/lar888/gulp.git",
+  "keywords": [],
+  "author": "lar888 <lar888@i.ua>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lar888/gulp/issues"
+  },
+  "homepage": "https://github.com/lar888/gulp#readme",
+  "description": "",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "browser-sync": "^3.0.4",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^7.0.7",
+    "gulp": "^5.0.1",
+    "gulp-csscomb": "^3.1.0",
+    "gulp-postcss": "^10.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^6.0.1",
+    "sass": "^1.89.2",
+    "sort-css-media-queries": "^3.0.1"
+  }
+}
